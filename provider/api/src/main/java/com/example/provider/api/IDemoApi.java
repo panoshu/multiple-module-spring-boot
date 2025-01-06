@@ -11,9 +11,9 @@ import org.springframework.web.service.annotation.HttpExchange;
  * @since 2025/1/5 12:46
  **/
 
-@HttpExchange("/demo")
+@HttpExchange("provider")
 public interface IDemoApi {
 
-  @GetExchange("/api-a")
-  public String apiAlpha();
+  @GetExchange("api-a")
+  String apiAlpha();
 }

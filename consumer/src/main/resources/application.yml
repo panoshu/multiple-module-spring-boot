@@ -12,3 +12,9 @@ spring:
       settings:
         trace: false
         web-allow-others: false
+  cloud:
+    compatibility-verifier:
+      enabled: false
+
+server:
+  port: 8081

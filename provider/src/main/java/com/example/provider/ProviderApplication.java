@@ -2,6 +2,7 @@ package com.example.provider;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import reactivefeign.spring.config.EnableReactiveFeignClients;
 
 /**
  * description
@@ -11,6 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @since 2025/1/2 10:26
  */
 
+@EnableReactiveFeignClients
 @SpringBootApplication
 public class ProviderApplication {
   public static void main(String[] args){
