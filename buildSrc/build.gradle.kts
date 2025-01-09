@@ -4,13 +4,13 @@ plugins {
 
 repositories {
   mavenLocal()
+  // maven("https://maven.aliyun.com/repository/gradle-plugin")
   gradlePluginPortal()
 }
 
 dependencies {
-  // implementation("org.springframework.boot:org.springframework.boot.gradle.plugin:3.4.1")
-  // implementation("io.spring.dependency-management:io.spring.dependency-management.gradle.plugin:1.1.7")
-  implementation(libs.spring.boot)
-  implementation(libs.dependency.management)
-  implementation(libs.spring.cloud)
+  implementation(files(libs.javaClass.superclass.protectionDomain.codeSource.location))
+
+  implementation(libs.spring.boot.gradle.plugin)
+  implementation(libs.spring.dependency.management)
 }

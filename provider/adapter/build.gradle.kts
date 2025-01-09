@@ -1,3 +1,7 @@
+plugins {
+  id("spring-boot-module")
+}
+
 dependencies {
   api(project(":provider:application"))
   api("org.springframework.boot:spring-boot-starter-web")

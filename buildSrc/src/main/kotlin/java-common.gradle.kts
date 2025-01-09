@@ -1,3 +1,8 @@
+import org.gradle.accessors.dm.LibrariesForLibs
+
+private val Project.libs: LibrariesForLibs
+  get() = extensions.getByType()
+
 plugins {
   `java-library`
   idea
@@ -8,13 +13,16 @@ version = "0.0.1"
 
 java {
   toolchain {
-    languageVersion = JavaLanguageVersion.of(21)
+    languageVersion = JavaLanguageVersion.of(libs.versions.javaLanguageVersion.get())
   }
 }
 
 configurations {
   compileOnly {
     extendsFrom(configurations.annotationProcessor.get())
+  }
+  testCompileOnly {
+    extendsFrom(configurations.testAnnotationProcessor.get())
   }
 }
 
@@ -23,13 +31,6 @@ repositories {
   maven("https://maven.aliyun.com/repository/public")
   maven("https://maven.aliyun.com/repository/central")
   mavenCentral()
-}
-
-dependencies {
-  compileOnly("org.projectlombok:lombok")
-  annotationProcessor("org.projectlombok:lombok")
-  testImplementation("io.projectreactor:reactor-test")
-  testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
 tasks.withType<Test> {

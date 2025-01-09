@@ -26,9 +26,4 @@ public class ReactorConsumerController {
     return reactorApi.hello();
   }
 
-  @GetMapping("test")
-  public String test() {
-    return "test";
-  }
-
 }

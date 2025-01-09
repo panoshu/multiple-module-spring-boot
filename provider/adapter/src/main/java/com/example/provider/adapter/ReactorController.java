@@ -17,6 +17,6 @@ public class ReactorController implements ReactorApi {
 
   @Override
   public Mono<String> hello() {
-    return Mono.just("Hello World!");
+    return Mono.just("Hello World! I'm Reactor Feign");
   }
 }
