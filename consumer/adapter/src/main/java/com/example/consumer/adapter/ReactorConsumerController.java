@@ -1,8 +1,7 @@
 package com.example.consumer.adapter;
 
 import com.example.provider.api.ReactorApi;
-import jakarta.annotation.Resource;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
@@ -15,11 +14,12 @@ import reactor.core.publisher.Mono;
  * @since 2025/1/6 22:19
  **/
 
+@SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
 @RestController
+@RequiredArgsConstructor
 public class ReactorConsumerController {
 
-  @Resource
-  private ReactorApi reactorApi;
+  private final ReactorApi reactorApi;
 
   @GetMapping("dddd")
   public Mono<String> getReactor() {

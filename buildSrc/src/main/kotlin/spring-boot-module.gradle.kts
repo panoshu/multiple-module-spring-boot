@@ -17,6 +17,7 @@ dependencyManagement {
 
 dependencies {
   compileOnly("org.projectlombok:lombok")
+  annotationProcessor("org.projectlombok:lombok")
   implementation("org.springframework.boot:spring-boot-starter")
   annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
 

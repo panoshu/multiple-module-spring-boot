@@ -9,8 +9,10 @@ plugins {
 
 dependencies {
   compileOnly(libs.lombok)
+  annotationProcessor(libs.lombok)
 
   testCompileOnly(libs.lombok)
+  testAnnotationProcessor(libs.lombok)
   testImplementation(libs.junit.jupiter)
   testRuntimeOnly(libs.junit.platform.launcher)
 }

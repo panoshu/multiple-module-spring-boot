@@ -12,8 +12,8 @@ import reactivefeign.spring.config.EnableReactiveFeignClients;
  * @since 2025/1/2 10:26
  */
 
-@EnableReactiveFeignClients(basePackages = "com.example")
 @SpringBootApplication
+@EnableReactiveFeignClients(basePackages = "com.example")
 public class ConsumerApplication {
   public static void main(String[] args){
     SpringApplication.run(ConsumerApplication.class, args);

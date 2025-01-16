@@ -17,15 +17,6 @@ java {
   }
 }
 
-configurations {
-  compileOnly {
-    extendsFrom(configurations.annotationProcessor.get())
-  }
-  testCompileOnly {
-    extendsFrom(configurations.testAnnotationProcessor.get())
-  }
-}
-
 repositories {
   mavenLocal()
   maven("https://maven.aliyun.com/repository/public")
