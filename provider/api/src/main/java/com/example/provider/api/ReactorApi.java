@@ -12,7 +12,7 @@ import reactor.core.publisher.Mono;
  * @since 2025/1/6 21:32
  **/
 
-@ReactiveFeignClient(name = "provider", url = "127.0.0.1:8080")
+@ReactiveFeignClient(name = "provider", url = "127.0.0.1:8080", path = "provider")
 public interface ReactorApi {
 
   @GetMapping(value = "hello")

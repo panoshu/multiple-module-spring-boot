@@ -2,6 +2,7 @@ package com.example.provider.adapter;
 
 import com.example.provider.api.IDemoApi;
 import org.springframework.web.bind.annotation.RestController;
+import reactor.core.publisher.Mono;
 
 /**
  * description
@@ -15,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoController implements IDemoApi {
 
   @Override
-  public String apiAlpha() {
-    return "demo controller api alpha";
+  public Mono<String> apiAlpha() {
+    return Mono.just("demo controller api alpha");
   }
 }

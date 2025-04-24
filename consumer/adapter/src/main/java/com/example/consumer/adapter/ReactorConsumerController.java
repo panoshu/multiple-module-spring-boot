@@ -2,8 +2,8 @@ package com.example.consumer.adapter;
 
 import com.example.provider.api.ReactorApi;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.service.annotation.GetExchange;
 import reactor.core.publisher.Mono;
 
 /**
@@ -14,16 +14,15 @@ import reactor.core.publisher.Mono;
  * @since 2025/1/6 22:19
  **/
 
-@SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
 @RestController
 @RequiredArgsConstructor
 public class ReactorConsumerController {
 
   private final ReactorApi reactorApi;
 
-  @GetMapping("dddd")
+  @GetExchange("dddd")
   public Mono<String> getReactor() {
-    return reactorApi.hello();
+    return reactorApi.hello().map(value -> "Consumer: " + value);
   }
 
 }

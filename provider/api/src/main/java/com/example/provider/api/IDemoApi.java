@@ -2,6 +2,7 @@ package com.example.provider.api;
 
 import org.springframework.web.service.annotation.GetExchange;
 import org.springframework.web.service.annotation.HttpExchange;
+import reactor.core.publisher.Mono;
 
 /**
  * description
@@ -15,5 +16,5 @@ import org.springframework.web.service.annotation.HttpExchange;
 public interface IDemoApi {
 
   @GetExchange("api-a")
-  String apiAlpha();
+  Mono<String> apiAlpha();
 }
