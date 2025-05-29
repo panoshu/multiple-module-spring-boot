@@ -8,10 +8,10 @@ dependencyResolutionManagement {
   }
 }
 
-// pluginManagement {
-//   repositories {
-//     maven("https://maven.aliyun.com/repository/gradle-plugin")
-//     maven("https://maven.aliyun.com/repository/spring-plugin")
-//     gradlePluginPortal()
-//   }
-// }
+pluginManagement {
+  repositories {
+    maven("https://maven.aliyun.com/repository/gradle-plugin")
+    maven("https://maven.aliyun.com/repository/spring-plugin")
+    gradlePluginPortal()
+  }
+}
