@@ -3,6 +3,6 @@ plugins {
 }
 
 dependencies{
-
+  implementation(project(":auth:adapter"))
   implementation(libs.feign.reactor)
 }

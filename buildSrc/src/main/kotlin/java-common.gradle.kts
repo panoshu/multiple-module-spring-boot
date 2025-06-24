@@ -8,8 +8,8 @@ plugins {
   idea
 }
 
-group = "com.example"
-version = "0.0.1"
+group = "com.panoshu"
+version = "1.0.0"
 
 java {
   toolchain {
@@ -27,4 +27,5 @@ repositories {
 
 tasks.withType<Test> {
   useJUnitPlatform()
+  jvmArgs("-XX:+EnableDynamicAgentLoading")
 }

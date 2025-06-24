@@ -15,5 +15,4 @@ dependencies {
 
   implementation(libs.spring.boot.gradle.plugin)
   implementation(libs.spring.dependency.management)
-  implementation(libs.spring.cloud.dependency)
 }

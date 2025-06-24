@@ -5,6 +5,7 @@ private val Project.libs: LibrariesForLibs
 
 plugins {
   id("java-common")
+  id("custom-naming")
 }
 
 dependencies {
@@ -13,10 +14,13 @@ dependencies {
 
   testCompileOnly(libs.lombok)
   testAnnotationProcessor(libs.lombok)
-  testImplementation(libs.junit.jupiter)
-  testRuntimeOnly(libs.junit.platform.launcher)
-}
 
-tasks.withType<Test> {
-  useJUnitPlatform()
+  testImplementation(platform(libs.junit.bom))
+  testImplementation(platform(libs.mockito.bom))
+
+  testRuntimeOnly(libs.junit.platform.launcher)
+  testImplementation(libs.junit.jupiter)
+  testImplementation(libs.mockito.core)
+  testImplementation(libs.mockito.junit.jupiter)
+  testImplementation(libs.assertj.core)
 }

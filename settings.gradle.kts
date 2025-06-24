@@ -1,9 +1,10 @@
 rootProject.name = "multiple-module-spring-boot"
 
-include("common:base")
-include("common:domain")
-include("common:infrastructure:event-core")
-include("common:infrastructure:event-spring")
+include("common:common-base")
+include("common:common-domain")
+include("common:common-infrastructure:event-base")
+include("common:common-infrastructure:event-core")
+include("common:common-infrastructure:event-spring")
 
 include("provider:starter")
 include("provider:type")

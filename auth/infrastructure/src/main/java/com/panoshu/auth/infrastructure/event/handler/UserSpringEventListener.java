@@ -1,6 +1,6 @@
 package com.panoshu.auth.infrastructure.event.handler;
 
-import com.panoshu.iam.domain.user.events.UserRegisteredEvent;
+import com.panoshu.auth.domain.user.events.UserRegisteredEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 

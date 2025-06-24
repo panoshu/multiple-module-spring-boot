@@ -3,7 +3,7 @@ plugins {
 }
 
 dependencies {
-  implementation(project(":common:infrastructure:event-spring"))
+  implementation(project(":common:common-infrastructure:event-spring"))
   api(project(":auth:domain"))
   implementation("org.springframework.boot:spring-boot-starter-jooq")
 }

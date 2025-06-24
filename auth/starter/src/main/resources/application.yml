@@ -20,6 +20,8 @@ spring:
       enabled: false
 
 # event:
+#   default-delivery-channels:
+#     - springEvent
 #   delivery-rules:
 #     UserRegisteredEvent:
 #       - inProcessDomainEvent
