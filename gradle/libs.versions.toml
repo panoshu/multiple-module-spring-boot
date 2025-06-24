@@ -3,7 +3,9 @@
 [versions]
 javaLanguageVersion = "21"
 
+ulid-creator = "5.2.3"
 lombok = "1.18.36"
+logback = "1.5.18"
 junit-platform-launcher = "1.11.4"
 junit-jupiter = "5.11.4"
 
@@ -14,7 +16,9 @@ feign-reactor = "4.2.1"
 
 hutool-all = "5.8.35"
 
+
 [libraries]
+ulid-creator = {module = "com.github.f4b6a3:ulid-creator", version.ref = "ulid-creator"}
 lombok = {module = "org.projectlombok:lombok", version.ref = "lombok"}
 junit-platform-launcher = {module = "org.junit.platform:junit-platform-launcher", version.ref = "junit-platform-launcher"}
 junit-jupiter = {module = "org.junit.jupiter:junit-jupiter", version.ref = "junit-jupiter"}

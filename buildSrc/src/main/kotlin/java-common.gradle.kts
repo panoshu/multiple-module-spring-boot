@@ -21,6 +21,7 @@ repositories {
   mavenLocal()
   maven("https://maven.aliyun.com/repository/public")
   maven("https://maven.aliyun.com/repository/central")
+  maven("https://mirrors.cloud.tencent.com/nexus/repository/maven-public/")
   mavenCentral()
 }
 
