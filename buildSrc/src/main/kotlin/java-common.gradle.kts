@@ -19,10 +19,14 @@ java {
 
 repositories {
   mavenLocal()
+  mavenCentral()
   maven("https://maven.aliyun.com/repository/public")
   maven("https://maven.aliyun.com/repository/central")
   maven("https://mirrors.cloud.tencent.com/nexus/repository/maven-public/")
-  mavenCentral()
+}
+
+tasks.withType<JavaCompile>().configureEach {
+  options.encoding = "UTF-8"
 }
 
 tasks.withType<Test> {

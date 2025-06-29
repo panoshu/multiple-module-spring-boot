@@ -1,4 +1,3 @@
-import gradle.kotlin.dsl.accessors._54e3fdd02fa7d64409d4339ae260a9a7.testImplementation
 import org.gradle.accessors.dm.LibrariesForLibs
 
 private val Project.libs: LibrariesForLibs
