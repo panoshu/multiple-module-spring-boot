@@ -1,13 +1,22 @@
+import org.gradle.accessors.dm.LibrariesForLibs
+
+private val Project.libs: LibrariesForLibs
+  get() = extensions.getByType()
+
 plugins{
-  id("spring-boot-module")
+  id("java-common")
+  id("custom-naming")
   id("org.springframework.boot")
+  id("io.spring.dependency-management")
 }
 
 dependencies{
-  implementation("org.springframework.boot:spring-boot-starter")
-  annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
-}
+  implementation(platform(libs.spring.boot.dependency))
+  implementation(platform(libs.spring.cloud.dependency))
 
-// tasks.withType<Jar> {
-//   enabled = false
-// }
+  implementation(libs.spring.boot.starter)
+  annotationProcessor(libs.spring.boot.configuration.processor)
+
+  testRuntimeOnly(libs.junit.platform.launcher)
+  testImplementation(libs.spring.boot.starter.test)
+}

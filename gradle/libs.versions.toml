@@ -21,24 +21,30 @@ hutool-all = "5.8.35"
 [libraries]
 ulid-creator = {module = "com.github.f4b6a3:ulid-creator", version.ref = "ulid-creator"}
 lombok = {module = "org.projectlombok:lombok", version.ref = "lombok"}
+hutool-all = {module = "cn.hutool:hutool-all", version.ref = "hutool-all"}
+
 junit-bom = {module = "org.junit:junit-bom", version.ref = "junit"}
 junit-jupiter = {module = "org.junit.jupiter:junit-jupiter"}
 junit-platform-launcher = {module = "org.junit.platform:junit-platform-launcher"}
+
 mockito-bom = {module = "org.mockito:mockito-bom", version.ref = "mockito"}
 mockito-core = {module = "org.mockito:mockito-core"}
 mockito-junit-jupiter = {module= "org.mockito:mockito-junit-jupiter"}
+
 slf4j2-mock = {module = "org.simplify4u:slf4j2-mock", version.ref = "slf4j2-mock"}
 assertj-core = {module = "org.assertj:assertj-core", version.ref = "assertj-core"}
 
-boot-gradle-plugin = {module = "org.springframework.boot:spring-boot-gradle-plugin", version.ref = "spring-boot"}
 spring-boot-gradle-plugin = {module = "org.springframework.boot:org.springframework.boot.gradle.plugin", version.ref = "spring-boot"}
 spring-dependency-management = {module = "io.spring.dependency-management:io.spring.dependency-management.gradle.plugin", version.ref = "dependency-management"}
 spring-boot-dependency = {module = "org.springframework.boot:spring-boot-dependencies", version.ref = "spring-boot"}
 spring-cloud-dependency = {module = "org.springframework.cloud:spring-cloud-dependencies", version.ref = "spring-cloud"}
+
+spring-boot-starter = {module = "org.springframework.boot:spring-boot-starter"}
+spring-boot-starter-test = {module = "org.springframework.boot:spring-boot-starter-test"}
+spring-boot-configuration-processor = {module = "org.springframework.boot:spring-boot-configuration-processor"}
+
 feign-reactor = {module = "com.playtika.reactivefeign:feign-reactor-spring-cloud-starter", version.ref = "feign-reactor"}
 feign-reactor-spring-configuration = {module = "com.playtika.reactivefeign:feign-reactor-spring-configuration", version.ref = "feign-reactor"}
-
-hutool-all = {module = "cn.hutool:hutool-all", version.ref = "hutool-all"}
 
 [bundles]
 

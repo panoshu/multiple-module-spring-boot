@@ -2,7 +2,7 @@ import org.gradle.api.tasks.bundling.Jar
 import org.springframework.boot.gradle.tasks.bundling.BootJar
 
 project.afterEvaluate {
-  var modulePath = project.path.removePrefix(":").replace(":", "-")
+  var modulePath = project.path.removePrefix(":").replace(":", "-").removePrefix("common-")
 
   if (project.plugins.hasPlugin("org.springframework.boot")) {
     modulePath = modulePath.removeSuffix("-starter")

@@ -1,3 +1,4 @@
+import gradle.kotlin.dsl.accessors._54e3fdd02fa7d64409d4339ae260a9a7.testImplementation
 import org.gradle.accessors.dm.LibrariesForLibs
 
 private val Project.libs: LibrariesForLibs
@@ -9,30 +10,15 @@ plugins{
   id("io.spring.dependency-management")
 }
 
-dependencyManagement {
-  imports {
-    mavenBom(org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES)
-  }
-}
-
-val mockitoAgent: Configuration by configurations.creating {
-  isTransitive = false
-}
-
 dependencies {
+  implementation(platform(libs.spring.boot.dependency))
   implementation(platform(libs.spring.cloud.dependency))
 
-  compileOnly("org.projectlombok:lombok")
-  annotationProcessor("org.projectlombok:lombok")
+  compileOnly(libs.lombok)
+  annotationProcessor(libs.lombok)
 
   testCompileOnly(libs.lombok)
   testAnnotationProcessor(libs.lombok)
-  testImplementation("org.springframework.boot:spring-boot-starter-test")
   testRuntimeOnly(libs.junit.platform.launcher)
-
-  mockitoAgent(libs.mockito.core)
-}
-
-tasks.withType<Test> {
-  jvmArgs("-javaagent:${mockitoAgent.asPath}")
+  testImplementation(libs.spring.boot.starter.test)
 }
