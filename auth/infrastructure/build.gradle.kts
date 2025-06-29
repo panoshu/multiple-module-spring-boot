@@ -4,6 +4,9 @@ plugins {
 
 dependencies {
   implementation(project(":common:common-infrastructure:event-spring"))
-  api(project(":auth:domain"))
+  implementation(project(":auth:domain"))
   implementation("org.springframework.boot:spring-boot-starter-jooq")
+
+  implementation(libs.mapstruct)
+  annotationProcessor(libs.mapstruct.processor)
 }

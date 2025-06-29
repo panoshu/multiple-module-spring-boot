@@ -3,25 +3,25 @@
 [versions]
 javaLanguageVersion = "21"
 
-ulid-creator = "5.2.3"
 lombok = "1.18.36"
+mapstruct = "1.6.3"
 junit = "5.13.1"
 mockito = "5.18.0"
 slf4j2-mock = "2.4.0"
 assertj-core = "3.27.3"
 
-spring-cloud = "2024.0.0"
-spring-boot = "3.4.1"
+spring-cloud = "2025.0.0"
+spring-boot = "3.5.3"
 dependency-management = "1.1.7"
 feign-reactor = "4.2.1"
 
+ulid-creator = "5.2.3"
 hutool-all = "5.8.35"
 
-
 [libraries]
-ulid-creator = {module = "com.github.f4b6a3:ulid-creator", version.ref = "ulid-creator"}
 lombok = {module = "org.projectlombok:lombok", version.ref = "lombok"}
-hutool-all = {module = "cn.hutool:hutool-all", version.ref = "hutool-all"}
+mapstruct = {module = "org.mapstruct:mapstruct", version.ref = "mapstruct"}
+mapstruct-processor = {module = "org.mapstruct:mapstruct-processor", version.ref = "mapstruct"}
 
 junit-bom = {module = "org.junit:junit-bom", version.ref = "junit"}
 junit-jupiter = {module = "org.junit.jupiter:junit-jupiter"}
@@ -33,6 +33,9 @@ mockito-junit-jupiter = {module= "org.mockito:mockito-junit-jupiter"}
 
 slf4j2-mock = {module = "org.simplify4u:slf4j2-mock", version.ref = "slf4j2-mock"}
 assertj-core = {module = "org.assertj:assertj-core", version.ref = "assertj-core"}
+
+ulid-creator = {module = "com.github.f4b6a3:ulid-creator", version.ref = "ulid-creator"}
+hutool-all = {module = "cn.hutool:hutool-all", version.ref = "hutool-all"}
 
 spring-boot-gradle-plugin = {module = "org.springframework.boot:org.springframework.boot.gradle.plugin", version.ref = "spring-boot"}
 spring-dependency-management = {module = "io.spring.dependency-management:io.spring.dependency-management.gradle.plugin", version.ref = "dependency-management"}
